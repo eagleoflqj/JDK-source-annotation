@@ -2270,7 +2270,7 @@ public class TreeMap<K,V>
                     setColor(parentOf(parentOf(x)), RED);
                     rotateRight(parentOf(parentOf(x)));
                 }
-            } else {//父节点是次子，完全对称
+            } else {//父亲是次子，完全对称
                 Entry<K,V> y = leftOf(parentOf(parentOf(x)));
                 if (colorOf(y) == RED) {
                     setColor(parentOf(x), BLACK);
@@ -2315,7 +2315,7 @@ public class TreeMap<K,V>
             replacement.parent = p.parent;
             if (p.parent == null)//p是根，则设置新根
                 root = replacement;
-            else if (p == p.parent.left)//p不是根，就有父亲，更新父节点的指针
+            else if (p == p.parent.left)//p不是根，就有父亲，更新父亲的指针
                 p.parent.left  = replacement;
             else
                 p.parent.right = replacement;
