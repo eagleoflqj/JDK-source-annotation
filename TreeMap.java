@@ -2270,7 +2270,7 @@ public class TreeMap<K,V>
                     setColor(parentOf(parentOf(x)), RED);
                     rotateRight(parentOf(parentOf(x)));
                 }
-            } else {//父节点是右子节点，完全对称
+            } else {//父节点是次子，完全对称
                 Entry<K,V> y = leftOf(parentOf(parentOf(x)));
                 if (colorOf(y) == RED) {
                     setColor(parentOf(x), BLACK);
